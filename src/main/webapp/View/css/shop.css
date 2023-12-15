@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+
+/* reset CSS */
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 15vh;
+    padding-left: 190px;
+    padding-right: 190px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   	margin-top: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    font-size: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    list-style: none;
+    
+}
+
+li > a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li > button {
+    font-size: 25px;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 30px;
+}
+
+li > button > a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* footer */
+	
+	footer {
+		width: 100%;
+		height: 10vh;
+		background-color: black;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	footer > img {
+		width: 100px;
+		object-position: center;
+		object-fit: cover;
+	}
+	
+	footer > p {
+	color: white;
+	}
+	
+	footer > .social {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	footer > .social > ion-icon {
+		color: white;
+		margin-left: 15px;
+		margin-right: 15px;
+		font-size: 20px;
+	}

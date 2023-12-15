@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<c:url value = "css/home.css" /> " rel="stylesheet" type="text/css" >
+<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 		<div class="img">

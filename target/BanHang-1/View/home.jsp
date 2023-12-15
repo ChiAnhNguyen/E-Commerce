@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<c:url value = "css/home.css" /> " rel="stylesheet" type="text/css" >
+<link href="<c:url value = "./View/css/home.css" /> " rel="stylesheet" type="text/css" >
 </head>
 <body>
 
@@ -27,7 +27,7 @@
                 <li style="display: none"><a href="" ><ion-icon style="font-size: 30px; margin-top: 10px" name="cart-outline"></ion-icon></a></li>
                 <li>
 	            	<button >
-	            	<a href ="login.jsp">Login</a> 
+	            	<a href ="./View/login.jsp">Login</a> 
 	            	</button>
                 </li>
             </ul>
