@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+
+/* reset CSS */
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 15vh;
+    padding-left: 190px;
+    padding-right: 190px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   	margin-top: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    font-size: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    list-style: none;
+    
+}
+
+li > a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li > button {
+    font-size: 25px;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 30px;
+}
+
+li > button > a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* hero section */
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background-image: url("../assets/hero-section.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-left: 190px;
+    margin-right: 190px;
+    
+}
+
+#hero > h1 {
+    position: absolute;
+    font-size: 50px;
+    top: 150px;
+}
+
+#hero > p {
+    font-size: 25px;
+    position: absolute;
+    top: 300px;
+}
+
+#hero > button {
+    position: absolute;
+    font-size: 25px;
+    background-color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    top: 350px;
+}
+
+#hero > button > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* categories */
+
+#categories {
+    width: 100%;
+    height: 100vh;
+    padding-left: 190px;
+    padding-right: 190px;
+}
+
+#categories > h2 {
+    font-size: 30px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+#categories > .cate_select {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#categories > .cate_select > .cate_item {
+    width: 350px;
+    height: 250px;
+    background-color: #D1D1D1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#categories > .cate_select > .cate_item > img {
+	width: 200px;
+}
+
+#categories > .cate_select > .cate_item > button {
+	background-color: white;
+	padding: 5px 90px;
+	border: none;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+#categories > .cate_select > .cate_item > button > a {
+	color: black;
+	text-decoration: none;
+}
+
+/*new collection*/
+
+
+#new_collections {
+    width: 100%;
+    height: 100vh;
+    padding-left: 190px;
+    padding-right: 190px;
+}
+
+#new_collections > h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+#new_collections > p {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+#new_collections > .new_select {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+#new_collections > .new_select > .card_item {
+	width: 350px;
+	height: 400px;
+	background-color: #D8D8D8;
+	padding-left: 25px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 25px;
+}
+
+#new_collections > .new_select > .card_item > h3 {
+	font-size: 30px;
+}
+
+#new_collections > .new_select > .card_item > p {
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+#new_collections > .new_select > .card_item > .product {
+	width: 250px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#new_collections > .new_select > .card_item > .product > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+#new_collections > .new_select > .card_item > .price {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+#new_collections > .new_select > .card_item > .price > p {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#new_collections > .new_select > .card_item > .price > button {
+	width: 100px;
+	height: 30px;
+	background-color: black;
+	border: none;
+	border-radius: 5px;
+}
+
+#new_collections > .new_select > .card_item > .price > button > a {
+	color: white;
+	text-decoration: none;
+}
+
+#new_collections > .view_all {
+	text-align: center;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .5s;
+}
+
+#new_collections > .view_all > a {
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+	transition: all .5s;
+}
+
+#new_collections > .view_all:hover > a {
+	background-color: black;
+	color: white;
+	padding: 10px 25px;
+}

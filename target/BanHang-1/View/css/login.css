@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50%;
+	width: 50%;
+	height: 100%;
+}
+
+.img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.form {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	padding-left: 120px;
+	padding-right: 120px;
+}
+
+.form > h1 {
+	font-size: 40px;
+}
+
+.form > p {
+	margin-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+form > label {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+form > input {
+	margin-bottom: 20px;
+	width: 500px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+form > button {
+	width: 500px;
+	height: 50px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.exception {
+	display: unset;
+	margin-top: 15px;
+}
+
+.exception > a:nth-child(1) {
+	color: black;
+	text-decoration: none;
+}
+
+.exception > a:nth-child(2){
+	margin-left: 180px;
+	color: black;
+	text-decoration: none;
+
+}
