@@ -19,11 +19,11 @@
 
             <!-- navigation -->
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="./View/shop.jsp">Shop</a></li>
+                <li><a href="/BanHang/home">Home</a></li>
+                <li><a href="./shop.jsp">Shop</a></li>
                 <li style="display: none"><a href="">My Account</a></li>
                 <li style="display: none"><a href="./View/cart.jsp" ><ion-icon style="font-size: 30px; margin-top: 10px" name="cart-outline"></ion-icon></a></li>
-                <li><button><a href="./View/login.jsp">Login</a></button></li>
+                <li><button><a href="/BanHang/View/login.jsp">Login</a></button></li>
             </ul>
         </nav>
     </header>
