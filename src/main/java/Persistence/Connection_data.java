@@ -13,8 +13,8 @@ public class Connection_data  {
     try {
     String driver = "com.mysql.cj.jdbc.Driver";
     String url = "jdbc:mysql://localhost:3306/shop";
-    String usename  = "toan";
-    String password = "123456789";
+    String usename  = "root";
+    String password = "09096712789";
     Class.forName(driver);
 
      con = DriverManager.getConnection(url, usename, password);
@@ -25,6 +25,7 @@ public class Connection_data  {
 	}
        return con;
     }
-    
+ 
+	
 
 }
