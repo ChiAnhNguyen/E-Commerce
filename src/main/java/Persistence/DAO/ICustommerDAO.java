@@ -1,5 +1,7 @@
 package Persistence.DAO;
 
-public interface ICustommerDAO {
+import Domain.Model.Custommer;
 
+public interface ICustommerDAO {
+	public Custommer getCustomerByID(String email, String pasword);
 }
