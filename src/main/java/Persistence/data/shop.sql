@@ -3,8 +3,8 @@ CREATE DATABASE shop;
 USE shop;
 
 CREATE TABLE Customer (
-	id INT,
-    customer_id INT PRIMARY KEY,
+
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     email VARCHAR(255),
@@ -12,41 +12,42 @@ CREATE TABLE Customer (
     city VARCHAR(255),
     state VARCHAR(255),
     country VARCHAR(255),
-    created_at DATETIME
+    created_at DATETIME,
+    password VARCHAR(255)
 );
 
 CREATE TABLE Customer_login (
-    id INT,
-    account_id INT PRIMARY KEY,
-    password_hashed VARCHAR(255),
+
+    account_id INT PRIMARY KEY AUTO_INCREMENT,
+    
     locked_out BOOLEAN,
     FOREIGN KEY (account_id) REFERENCES Customer(customer_id)
 );
 
 CREATE TABLE loginAttemptHistory (
-    id INT,
-    account_id INT,
+
+    account_id INT PRIMARY KEY AUTO_INCREMENT,
     login_successful BOOLEAN,
     attempted_at DATETIME,
     FOREIGN KEY (account_id) REFERENCES Customer(customer_id)
 );
 
 CREATE TABLE Payment (
-    id INT,
-    payment_id INT PRIMARY KEY,
+
+    payment_id INT PRIMARY KEY ,
     payment_date DATE,
     payment_method VARCHAR(50)
 );
 
 CREATE TABLE Category (
-    id INT,
-    category_id INT PRIMARY KEY,
+
+    category_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50)
 );
 
 CREATE TABLE Product (
-    id INT,
-    product_id INT PRIMARY KEY,
+
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
     SKU VARCHAR(50),
     price DECIMAL(10, 2),
     description TEXT,
@@ -55,34 +56,34 @@ CREATE TABLE Product (
     FOREIGN KEY (category_id) REFERENCES Category(category_id)
 );
 CREATE TABLE orderStatusCode (
-    status_code_id INT PRIMARY KEY,
+    status_code_id INT PRIMARY KEY AUTO_INCREMENT,
     description VARCHAR(256)
 );
 CREATE TABLE order_ (
-    id INT,
-    customer_id INT,
+
+    customer_id INT AUTO_INCREMENT,
     status_code_id INT,
     customer_comments VARCHAR(256),
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
     FOREIGN KEY (status_code_id) REFERENCES orderStatusCode(status_code_id)
 );
 
-ALTER TABLE order_ ADD INDEX (id);
+ALTER TABLE order_ ADD INDEX (customer_id);
 
 
 CREATE TABLE order_item (
-    id INT,
-    order_id INT,
+
+    order_id INT AUTO_INCREMENT, 
     product_id INT,
     quantity INT,
     price FLOAT,
-    FOREIGN KEY (order_id) REFERENCES order_(id),
+    FOREIGN KEY (order_id) REFERENCES order_(customer_id),
     FOREIGN KEY (product_id) REFERENCES Product(product_id)
 );
 
 CREATE TABLE shoppingcartItem (
-    id INT,
-    customer_id INT,
+
+    customer_id INT AUTO_INCREMENT,
     product_id INT,
     quantity INT,
     price FLOAT,
@@ -91,11 +92,16 @@ CREATE TABLE shoppingcartItem (
 );
 
 CREATE TABLE Shipment (
-    id INT,
-    shipment_id INT PRIMARY KEY,
+
+    shipment_id INT PRIMARY KEY AUTO_INCREMENT,
     shipment_date DATE,
     to_address VARCHAR(255),
     from_address VARCHAR(255),
     order_id INT,
-    FOREIGN KEY (order_id) REFERENCES order_(id)
+    FOREIGN KEY (order_id) REFERENCES order_(customer_id)
 );
+
+
+
+
+
